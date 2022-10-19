@@ -307,8 +307,8 @@ list.push(4); // OK
           Use const whenever possible.
           If you need a variable to be reassignable, use let, not var.
           There is a lot of code on Internet using var, but you must avoid it <br>
-          <div class="mini-card">
-            <article id="type">
+          <div class="mini-card" id="type">
+            <article>
               <h3>Types</h3>
               JS variables do not have types, but the values do.
               There are six primitive types (mdn): <br>
@@ -331,8 +331,8 @@ list.push(4); // OK
               There's a Math class: Math.floor, Math.ceil, etc. <br>
             </article>
           </div>
-          <div class="mini-card">
-            <article id="strings">
+          <div class="mini-card" id="strings">
+            <article>
               <h3>Strings</h3>
               Can be defined with single or double quotes
               Many style guides prefer single-quote, but there is no functionality difference Immutable
@@ -341,8 +341,8 @@ list.push(4); // OK
               Can check size via length property (not function)
             </article>
           </div>
-          <div class="mini-card">
-            <article id="boolean">
+          <div class="mini-card" id="boolean">
+            <article>
               <h3>Boolean</h3>
               There are two literal values for boolean: true and false
               that behave as you would expect <br>
@@ -355,8 +355,8 @@ list.push(4); // OK
               </ul>
             </article>
           </div>
-          <div class="mini-card">
-            <article id="equality">
+          <div class="mini-card" id="equality">
+            <article>
               <h3>Equality</h3>
               JavaScript's == and != show strange behaviour <br>
               <div>
@@ -390,8 +390,8 @@ null === undefined // false
               Always use === and !== and don't use == or !=
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Null and Undefined">
+          <div class="mini-card" id="Null and Undefined">
+            <article>
               <h3>Null and Undefined</h3>
               null is a value representing the absence of a value, similar to null in Java and nullptr in C++. <br>
               undefined is the value given to a variable that has not been assigned a value. <br>
@@ -407,8 +407,8 @@ console.log (y)// prints undefined
               </div>
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Arrays">
+          <div class="mini-card" id="Arrays">
+            <article>
               <h3>Arrays</h3>
               Arrays are Object types used to create lists of data.
               <div>
@@ -426,8 +426,8 @@ snacks[1] = 'masala dosa';
               Can check size via length property (not function)
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Events">
+          <div class="mini-card" id="Events">
+            <article>
               <h3>Events</h3>
               Event-driven programming Most JavaScript written in the browser is event-driven The code doesn't run right
               away, but it executes after some event fires.
@@ -443,16 +443,16 @@ function onClick() {
               Any function listening to that event now executes. This function is called an "event handler."
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Using event listeners">
+          <div class="mini-card" id="Using event listeners">
+            <article>
               <h3>Using event listeners</h3>
               Suppose we want to print "Clicked" to the browser Console when the user clicks a particular button:
               We need to add an event listener to the button...
               How do we talk to an element in HTML from JavaScript?
             </article>
           </div>
-          <div class="mini-card">
-            <article id="The DOM">
+          <div class="mini-card" id="The DOM">
+            <article>
               <h3>The DOM</h3>
               Insert image Every element on a page is accessible in JavaScript through the DOM: Document Object
               Model.The DOM is the tree of nodes corresponding to HTML elements on a page.Can modify, add and remove
@@ -460,8 +460,8 @@ function onClick() {
               which will modify, add, or remove the corresponding element on the page
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Getting DOM objects">
+          <div class="mini-card" id="Getting DOM objects">
+            <article>
               <h3>Getting DOM objects</h3>
               We can access an HTML element's corresponding DOM object in JavaScript via the querySelector function:
               <div>
@@ -474,8 +474,8 @@ let element = document.querySelector('#button');
               </div>
             </article>
           </div>
-          <div class="mini-card">
-            <article id="Adding event listeners">
+          <div class="mini-card" id="Adding event listeners">
+            <article>
               <h3>Adding event listeners</h3>
               Each DOM object has the following function:addEventListener(event name, function name); event name is the
               string name of the JavaScript event you want to listen to Common ones: click, focus, blur,
