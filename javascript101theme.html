@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript 101</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/styles/night-owl.min.css"
+    integrity="sha512-i5X6Fdn/ZqvGSqPrdMa3FgcpXM/Nr6YccSKFYT93zljl/HZDEpvBbE5Pxp91eiWGccZLrL/LDQJd7fjTRYsVaA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.6.0/highlight.min.js"
+    integrity="sha512-gU7kztaQEl7SHJyraPfZLQCNnrKdaQi5ndOyt4L4UPL/FHDd/uB9Je6KDARIqwnNNE27hnqoWLBq+Kpe4iHfeQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    document.addEventListener('DOMContentLoaded', (event) => {
+      document.querySelectorAll('pre code').forEach((el) => {
+        hljs.highlightElement(el);
+      });
+    });
+  </script>
+</head>
+
+<body>
+  <h1>JavaScript 101</h1>
+  <main>
+    <ol>
+      <div class="card">
+        <li id="What is javascript">
+          <h2>What is javascript</h2>
+        </li>
+        <article>JavaScript is a programming language.
+          It is currently the only programming
+          language that your browser can execute
+          natively. (There are efforts to change that.)
+          Therefore if you want to make web sites interactive, you must use JavaScript:
+          There are no other options.
+          Created in 1995 by Brendan Eich
+          JavaScript has nothing to do with Java
+          <ul>
+            <li>Literally named that way for marketing reasons</li>
+            <li>The first version was written in 10 days</li>
+          </ul>
+        </article>
+      </div>
+      <div class="card">
+        <li id="Javascript in browser">
+          <h2>Javascript in browser</h2>
+        </li>
+        <article>
+          HTML can embed JavaScript files into the web page via the &lt;script&gt; tag.
+          You can print log messages in JavaScript by calling console.log(). This JavaScript's
+          equivalent of
+          Java's System.out.println, print, printf, etc.
+          First javascript to print Hello, world on console <br>
+          Create html file called helloWorld.html <br>
+          <div>
+            <pre>
+              <code class="language-html">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;title&gt;First JS Example&lt;/title&gt;
+&lt;script src="script.js"&gt;&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+              </code>
+            </pre>
+          </div>
+          Create a javascript file called script.js with the single line <br>
+          <div>
+            <pre>
+              <code class="language-js">
+console.log("Hello, world!");
+              </code>
+            </pre>
+          </div>
+        </article>
+      </div>
+      <div class="card">
+        <li id="JavaScript execution">
+          <h2>JavaScript execution</h2>
+        </li>
+        <article>
+          There is no "main method"
+          The script file is executed from top to bottom.
+          There's no compilation by the developer, JavaScript is compiled and executed on the fly by the
+          browser.
+        </article>
+      </div>
+      <div class="card">
+        <li id="JavaScript language features">
+          <h2>JavaScript language features</h2>
+        </li>
+        <article>Same as Java/C++/C-style langs <br>
+          for-loops:
+          <div>
+            <pre>
+              <code class="language-js">
+for (let i = 0; i &lt; 5; i++) { ... }
+              </code>
+            </pre>
+          </div>
+          while-loops:
+          <div>
+            <pre>
+              <code class="language-js">
+for (let i = 0; i &lt; 5; i++) { ... }
+              </code>
+            </pre>
+          </div>
+          while-loops:
+          <div>
+            <pre>
+              <code class="language-js">
+while (notFinished) { ... }
+              </code>
+            </pre>
+          </div>
+          comments:
+          <div>
+            <pre><code>
+// comment or /* comment */
+            </code></pre>
+          </div>
+          conditionals (if statements):
+          <div>
+            <pre>
+              <code class="language-js">
+if (...) {
+...
+} else {
+...
+}
+              </code>
+            </pre>
+          </div>
+        </article>
+      </div>
+      <div class="card">
+        <li id="Functiondef">
+          <h2>Functions</h2>
+        </li>
+        <article>
+          Functions <br>
+          One way of defining a JavaScript function is with the following syntax:
+          <div>
+            <pre>
+              <code class="language-js">
+function foo() {
+statement;
+statement;
+...
+}
+              </code>
+            </pre>
+          </div>
+          Create a file called script.js. Write the following code in it:
+          <div>
+            <pre>
+              <code class="language-js">
+function hello() {
+  console.log('Hello!');
+  console.log('Welcome to JavaScript');
+}
+hello();//call the function
+hello();
+    
+function printMessage(message, times) {
+  for (var i = 0; i &lt; times; i++) {
+    console.log(message);
+  }
+}
+              </code>
+            </pre>
+          </div>
+          Function parameters are not declared with var, let, or
+          const
+        </article>
+      </div>
+      <div class="card">
+        <li id="Variables">
+          <h2>Variables: var, let, const</h2>
+        </li>
+        <article>
+          Declare a variable in JS with one of three keywords:
+          <div>
+            <pre>
+              <code class="language-js">
+// Function scope variable
+var x = 15;
+// Block scope variable
+let fruit = 'banana';
+// Block scope constant; cannot be reassigned
+const isHungry = true;
+              </code>
+            </pre>
+          </div>
+          You do not declare the datatype of the variable before using it ("dynamically typed")
+        </article>
+      </div>
+      <div class="card">
+        <li id="Understanding var">
+          <h2>Understanding var</h2>
+        </li>
+        <article>
+          <div>
+            <pre>
+            <code class="language-js">
+function printMessage(message, count) {
+    for (var i = 0; i &lt; count; i++) {
+console.log(message);
+    }
+    console.log('Value of i is ' + i);
+  }
+printMessage('hello', 3);
+            </code>
+            </pre>
+          </div>
+          What happens?
+          The value of "i" is readable outside the for-loop because
+          variables declared with var
+          have function scope.
+          <div>
+            <pre>
+              <code class="language-js">
+function foo (){
+  var x=0;
+  if (x>0){
+    var y =10;
+  }
+  console.log('y is ' + y);//prints as expected
+}
+foo();
+console.log('y is ' + y); // error
+              </code>
+            </pre>
+          </div>
+        </article>
+      </div>
+      <div class="card">
+        <li id="Understanding let">
+          <h2>Understanding let</h2>
+        </li>
+        <article>
+          <div>
+            <pre>
+            <code class="language-js">
+function printMessage(message, count) {
+  for (let i = 0; i &lt; count; i++) {
+    console.log(message);
+  }
+  console.log('Value of i is ' + i);
+}
+printMessage('hello', 3);
+          </code>
+        </pre>
+          </div>
+          What happens?
+          let has block-scope so this results in an error
+        </article>
+      </div>
+      <div class="card">
+        <li id="Understanding const">
+          <h2>Understanding const</h2>
+        </li>
+        <article>
+          Understanding const
+          <div>
+            <pre>
+              <code class="language-js">
+let x = 10;
+if (x > 0) {
+  const y = 10;
+}
+console.log(y);
+// error!
+              </code>
+            </pre>
+          </div>
+          Like let, const also has block-scope, so accessing the
+          variable outside the block results in an error
+          <div>
+            <pre>
+            <code class="language-js">
+const y = 10;
+y = 0; // error!
+y++; // error!
+const list = [1, 2, 3];
+list.push(4); // OK
+            </code>
+          </pre>
+          </div>
+          const declared variables cannot be reassigned.
+          let can be reassigned, which is the difference between
+          const and let.
+        </article>
+      </div>
+      <div class="card">
+        <li id="Variables best practices">
+          <h2>Variables best practices</h2>
+        </li>
+        <section>
+          Use const whenever possible.
+          If you need a variable to be reassignable, use let, not var.
+          There is a lot of code on Internet using var, but you must avoid it <br>
+          <div class="mini-card">
+            <article id="type">
+              <h3>Types</h3>
+              JS variables do not have types, but the values do.
+              There are six primitive types (mdn): <br>
+              Boolean : true and false <br>
+              Number : everything is a double (no integers) <br>
+              String: in 'single' or "double-quotes" <br>
+              Null: null: a value meaning "this has no value" <br>
+              Undefined: the value of a variable with no value assigned <br>
+              There are also Object types, including Array, Date, String (the object wrapper for the primitive type),
+              etc.
+            </article>
+          </div>
+          <div class="mini-card" id="number">
+            <article>
+              <h3>Numbers</h3>
+              All numbers are floating point real numbers. No integer type. <br>
+              Operators are like Java or C++. <br>
+              Precedence like Java or C++. <br>
+              A few special values: NaN (not-a-number), +Infinity, -Infinity <br>
+              There's a Math class: Math.floor, Math.ceil, etc. <br>
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="strings">
+              <h3>Strings</h3>
+              Can be defined with single or double quotes
+              Many style guides prefer single-quote, but there is no functionality difference Immutable
+              No char type: letters are strings of length one
+              Can use plus for concatenation
+              Can check size via length property (not function)
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="boolean">
+              <h3>Boolean</h3>
+              There are two literal values for boolean: true and false
+              that behave as you would expect <br>
+              Can use the boolean operators: && || !
+              Non-boolean values can be used in control statements, which
+              get converted to true or false
+              <ul>
+                <li>null, undefined, 0, NaN, '', "" evaluate to false</li>
+                <li>Everything else evaluates to true</li>
+              </ul>
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="equality">
+              <h3>Equality</h3>
+              JavaScript's == and != show strange behaviour <br>
+              <div>
+                <pre>
+                  <code class="language-js">
+'' == '0' // false
+'' == 0 // true
+0 == '0' // true
+NaN == NaN // false
+[''] == '' // true
+false == undefined // false
+false == null // false
+null == undefined // true
+                  </code>
+                </pre>
+              </div>
+              ECMAScript standard kept the existing behavior but added === and !== <br>
+              <div>
+                <pre>
+                  <code class="language-js">
+'' === '0' // false
+'' === 0 // false
+0 === '0' // false
+[''] === '' // false
+false === undefined // false
+false === null // false
+null === undefined // false
+                  </code>
+                </pre>
+              </div>
+              Always use === and !== and don't use == or !=
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Null and Undefined">
+              <h3>Null and Undefined</h3>
+              null is a value representing the absence of a value, similar to null in Java and nullptr in C++. <br>
+              undefined is the value given to a variable that has not been assigned a value. <br>
+              <div>
+                <pre>
+                <code class="language-js">
+let x = null;
+let y;
+console.log (x)// prints null
+console.log (y)// prints undefined
+                </code>
+              </pre>
+              </div>
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Arrays">
+              <h3>Arrays</h3>
+              Arrays are Object types used to create lists of data.
+              <div>
+                <pre>
+                  <code class="language-js">
+// Creates an empty list
+let list = [];
+let snacks = ['chips', 'alu bonda'];
+snacks[1] = 'masala dosa';
+                  </code>
+                </pre>
+              </div>
+              0-based indexing
+              Mutable
+              Can check size via length property (not function)
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Events">
+              <h3>Events</h3>
+              Event-driven programming Most JavaScript written in the browser is event-driven The code doesn't run right
+              away, but it executes after some event fires.
+              <div>
+                <pre>
+                <code class="language-js">
+function onClick() {
+...
+}
+                </code>
+              </pre>
+              </div>
+              Any function listening to that event now executes. This function is called an "event handler."
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Using event listeners">
+              <h3>Using event listeners</h3>
+              Suppose we want to print "Clicked" to the browser Console when the user clicks a particular button:
+              We need to add an event listener to the button...
+              How do we talk to an element in HTML from JavaScript?
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="The DOM">
+              <h3>The DOM</h3>
+              Insert image Every element on a page is accessible in JavaScript through the DOM: Document Object
+              Model.The DOM is the tree of nodes corresponding to HTML elements on a page.Can modify, add and remove
+              nodes on the DOM,
+              which will modify, add, or remove the corresponding element on the page
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Getting DOM objects">
+              <h3>Getting DOM objects</h3>
+              We can access an HTML element's corresponding DOM object in JavaScript via the querySelector function:
+              <div>
+                <pre>
+                <code class="language-js">
+let element = document.querySelector('#button');
+// Returns the element with id="button"
+                </code>
+              </pre>
+              </div>
+            </article>
+          </div>
+          <div class="mini-card">
+            <article id="Adding event listeners">
+              <h3>Adding event listeners</h3>
+              Each DOM object has the following function:addEventListener(event name, function name); event name is the
+              string name of the JavaScript event you want to listen to Common ones: click, focus, blur,
+              etc
+              function name is the name of the JavaScript function
+              you want to execute when the event fires. <br>
+              Write html code as follows
+              <div>
+                <pre>
+                <code>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script&gt;
+  function onClick() {
+    console.log("You clicked")
+  }
+  const but = document.querySelector('button');
+  button.addEventListener('click', onClick);
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;button&gt;Click me&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </code>
+              </pre>
+              </div>
+            </article>
+          </div>
+        </section>
+      </div>
+    </ol>
+  </main>
+</body>
+
+</html>
